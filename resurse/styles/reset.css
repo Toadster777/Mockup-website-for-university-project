@@ -1,0 +1,86 @@
+html,
+body {
+    margin: var(--min-border);
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    line-height: 1;
+    vertical-align: baseline;
+    background: transparent;
+    --min-border: 2px;
+    --culoare-menu: #5BD5FC;
+    --culoare-background: #E7F3F3;
+    --culoare-text: #5EA4E6;
+    --culoare-border: #575CF2;
+    --culoare-c1: red;
+    --culoare-c2: green;
+    --culoare-border-tabel: black;
+    --culoare-link-top-inchis: black;
+    --culoare-link-top-border-inchis: black;
+    --culoare-border-iframe: darkgreen;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+div,
+span,
+iframe,
+p,
+address,
+small,
+strong,
+ul,
+li,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+video {
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+nav ul {
+    list-style: none;
+}
+
+a {
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

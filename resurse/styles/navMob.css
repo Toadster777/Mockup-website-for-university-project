@@ -1,0 +1,143 @@
+#hamburger {
+  display: block;
+  height: var(--inaltime-menu);
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  z-index: 10;
+}
+#hamburger div:nth-child(1n) {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  animation-name: animatie_ham1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+#hamburger div:nth-child(2n) {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  animation-name: animatie_ham2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+#hamburger div:nth-child(3n) {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  animation-name: animatie_ham3;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+ul.menu {
+  display: none;
+  position: relative;
+  animation-name: animatie-menu;
+  transform-origin: top left;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  z-index: 10;
+}
+ul.menu li {
+  width: 100% !important;
+}
+ul.menu > li:hover ul {
+  animation-name: animatie_submeniu_mic;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: block;
+}
+ul.menu > li:hover ul a:hover {
+  box-shadow: inset 0px 0px 8px;
+}
+
+#peste-menu:checked ~ ul.menu {
+  display: block;
+}
+
+@keyframes animatie_ham1 {
+  0% {
+    margin-left: -30px;
+    background-color: #5BD5FC;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    background-color: red;
+    opacity: 1;
+  }
+}
+@keyframes animatie_ham2 {
+  0% {
+    transform: scale(0, 0);
+    background-color: yellow;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    background-color: yellow;
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes animatie_ham3 {
+  0% {
+    transform-origin: bottom;
+    background-color: #5BD5FC;
+    transform: rotate(-0.25turn);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    background-color: blue;
+    opacity: 1;
+  }
+}
+@keyframes animatie_submeniu_mic {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes animatie-menu {
+  0% {
+    transform: scale(0, 0);
+  }
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}

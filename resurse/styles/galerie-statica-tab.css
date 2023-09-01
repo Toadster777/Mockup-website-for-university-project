@@ -1,0 +1,11 @@
+#grid-galerie {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
+.emptySpace {
+    display: none;
+}
+
+.emptySpace2 {
+    display: none;
+}

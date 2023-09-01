@@ -1,0 +1,81 @@
+footer>address {
+  text-align: center;
+}
+
+footer>p {
+  text-align: right;
+}
+
+footer #banner {
+  width: 40%;
+  font-size: 200%;
+  text-align: center;
+  background-color: var(--culoare-menu);
+  color: var(--culoare-menu-text);
+  position: absolute;
+  left: 0;
+  animation-name: anim_banner;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
+  z-index: -10;
+}
+
+@keyframes anim_banner {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.background-fix {
+  animation-name: animatie-background-fix;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: block;
+  background-image: url("../media/imagine-mare.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 30rem;
+}
+
+@keyframes animatie-background-fix {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.75;
+  }
+}
+
+.video-background video {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -20;
+}
+
+.video-background p {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -12rem;
+  font-size: 3rem;
+  color: var(--culoare-text-video-background);
+}
+
+/*# sourceMappingURL=style.css.map */

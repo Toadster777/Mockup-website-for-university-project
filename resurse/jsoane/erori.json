@@ -1,0 +1,33 @@
+{
+    "cale_baza": "resurse/media",
+    "info_erori": [
+        {
+            "identificator": 404,
+            "status": true,
+            "titlu": "Error 404",
+            "text": "Page not found",
+            "imagine": "img404.jpg"
+        },
+        {
+            "identificator": 403,
+            "status": true,
+            "titlu": "Error 403",
+            "text": "Forbidden access",
+            "imagine": "img403.jpg"
+        },
+        {
+            "identificator": 2,
+            "status": false,
+            "titlu": "Database error",
+            "text": "Yikes, it ain't workin' chief!",
+            "imagine": "errorDatabase.jpeg"
+        },
+        {
+            "identificator": 3,
+            "status": false,
+            "titlu": "Date gresite",
+            "text": "Verificati datele",
+            "imagine": "errorDatabase.jpeg"
+        }
+    ]
+}

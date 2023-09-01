@@ -1,0 +1,168 @@
+body {
+  --culoare-menu-selectat: #3498db;
+  --culoare-background: #f5e3e0;
+  --culoare-text: #000;
+  --culoare-border: #2ecc71;
+  --culoare-border-tabel: #95a5a6;
+  --culoare-link-top-inchis: black;
+  --culoare-link-top-border-inchis: black;
+  --culoare-border-iframe: #2ecc71;
+  --culoare-info-produse: black;
+  --culoare-galeria-zoom-text: black;
+  --culoare-text-video-background: white;
+  --culoare-cerc: #E7F3F3;
+  --culoare-menu-text: black;
+  --culoare-info-produse-text: #5BD5FC;
+  --culoare-background-input: #5BD5FC;
+  --inaltime-menu: 45px;
+  --latime-buton: 100%;
+  --latime-border: 1px;
+}
+
+ul.menu {
+  font-size: 1.2em;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.menu li {
+  z-index: 50;
+}
+ul.menu li a {
+  color: var(--culoare-menu-text);
+  display: block;
+  height: 100%;
+}
+ul.menu li div:hover {
+  background-color: var(--culoare-menu-text);
+}
+ul.menu > li {
+  height: var(--inaltime-menu);
+  overflow: hidden;
+  line-height: var(--inaltime-menu);
+  vertical-align: middle;
+  border: var(--latime-border) solid var(--culoare-border);
+  width: var(--latime-buton);
+  text-align: center;
+}
+ul.menu > li > a:hover {
+  box-shadow: inset 0px 0px 8px;
+}
+ul.menu > li:hover {
+  overflow: visible;
+}
+ul.menu > li:hover ul {
+  animation-name: animatie_submeniu;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: block;
+}
+ul.menu ul {
+  list-style: none;
+  z-index: 10px;
+  position: relative;
+  left: -1px;
+  padding: 0;
+  margin: 0;
+  transform: scaleX(0.5) scaleY(0);
+  transform-origin: 50% 0;
+  opacity: 0;
+  display: none;
+  overflow: hidden;
+}
+ul.menu ul li {
+  height: var(--inaltime-menu);
+  border: var(--latime-border) solid var(--culoare-border);
+  width: var(--latime-buton);
+}
+ul.menu ul li a {
+  text-transform: capitalize;
+}
+ul.menu ul li a span {
+  opacity: 0;
+  scale: 200%;
+  position: fixed;
+  left: -22px;
+  animation: animatie_sageata_out;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  display: block;
+}
+ul.menu ul li a:hover span {
+  animation: animatie_sageata_in;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: block;
+}
+ul.menu a {
+  color: var(--culoare-border-tabel);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 1s linear;
+  background-color: var(--culoare-menu);
+  text-decoration: none;
+}
+ul.menu div {
+  color: var(--culoare-border-tabel);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 1s linear;
+  background-color: var(--culoare-menu);
+  text-decoration: none;
+}
+
+nav {
+  height: var(--inaltime-menu);
+  background-color: var(--culoare-menu);
+  overflow: visible;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+}
+
+#peste-menu,
+#hamburger {
+  display: none;
+}
+
+@keyframes animatie_submeniu {
+  0% {
+    transform: scale(0, 0);
+  }
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes animatie_sageata_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 7%;
+  }
+}
+@keyframes animatie_sageata_out {
+  0% {
+    opacity: 1;
+    left: 7%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  ul.menu span {
+    display: none !important;
+  }
+}

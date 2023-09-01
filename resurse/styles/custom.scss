@@ -1,0 +1,53 @@
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with ( //Schimbari aduse atat pt bg cat si pt text
+    $primary: pink,
+    $warning: #ECB365,
+    $secondary: #2D1115,
+
+    //Partea de dimensiuni pt ecrane
+    $grid-breakpoints: (xs: 0,
+        sm: 768px,
+        md: 1023px,
+        lg: 1440px,
+        xl: 1920px,
+        xxl: 2560px),
+
+    //Partea de dimensiuni pt heading-uri
+    $h1-font-size: 2rem,
+    $h2-font-size: 2.3rem,
+    $h3-font-size: 2.5rem,
+
+    //Partea de butoane
+    $btn-font-size: 2rem,
+    $btn-border-radius: 1.5rem,
+
+    //Font "Segoe UI"
+    $font-family-base: var(--#{2}font-sans-serif),
+
+    //Extra button
+    $btn-padding-y: 1,
+    $btn-padding-x: 0.2,
+
+    //Bulina slider input produse
+    $form-range-thumb-width: 1.5rem,
+    $form-range-thumb-bg: var(--culoare-info-produse),
+    $form-range-track-bg: gray,
+
+);
+
+@import "./nav.scss";
+
+.btn {
+    padding-right: 25px;
+}
+
+.btn-toolbar {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    .btn {
+        padding-right: 5px;
+        background-color: var(--culoare-menu);
+    }
+}

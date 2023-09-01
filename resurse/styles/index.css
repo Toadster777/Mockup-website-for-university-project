@@ -1,0 +1,633 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Stiluri pentru ecranul mare (desktop) */
+main.indexPage {
+    display: grid;
+    grid-template-rows: auto auto 1fr 1fr auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+        "zone1 zone1 zone1"
+        "zone5 zone6 zone7"
+        "zone3 zone3 zone2"
+        "zone4 zone4 zone2"
+        "zone8 zone8 zone8";
+    font-size: 18px;
+    transition: font-size 0.7s ease-in-out;
+}
+
+.link {
+    color: gray;
+    position: relative;
+    font-size: 14px;
+    text-decoration: none;
+
+    animation-name: arrow-out;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.laterale:hover .link {
+    animation-name: arrow-in;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrow-in {
+    0% {
+        bottom: 0px;
+        color: gray;
+    }
+
+    100% {
+        bottom: 6px;
+        color: red;
+    }
+}
+
+@keyframes arrow-out {
+    0% {
+        bottom: 6px;
+        color: red;
+    }
+
+    100% {
+        bottom: 0px;
+        color: gray;
+    }
+}
+
+.laterale {
+    border-left: 4px solid lightgray;
+    border-right: 4px solid lightgray;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding: 0 10px 2px;
+    animation: anim_laterale_out;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.laterale:hover {
+    animation-name: anim_laterale_in;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/* it's all done except 5 (from the font color)*/
+#video-vtt {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    /* Lățimea maximă */
+    min-width: 300px;
+    /* Lățimea minimă */
+    height: auto;
+    /* Înălțimea se ajustează automat proporțional cu lățimea */
+    display: block;
+    margin: 0 auto;
+    /* Centrează videoclipul */
+}
+
+#duotone>div {
+    margin-top: 2rem;
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    width: 400px;
+    height: 270px;
+    transition: 1.6s linear;
+}
+
+#duotone>div:after,
+#duotone>div:before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#duotone>div:after {
+    background-color: rgb(0, 0, 255);
+    mix-blend-mode: lighten;
+}
+
+#duotone>div:before {
+    background-color: rgb(205, 0, 255);
+    mix-blend-mode: darken;
+}
+
+#duotone>div:hover {
+    filter: grayscale(1);
+}
+
+.text-reflectat {
+    right: 20%;
+    color: red;
+    transform-origin: 0 0;
+    /*conetaza ordinea transformarilor!*/
+    transform: translate(350px, 15px) rotateY(180deg) skew(-25deg) rotateZ(-25deg);
+}
+
+.text {
+    position: relative;
+    top: 9%;
+    left: 5%;
+    transform-origin: 0 0;
+    transform: rotateY(35deg) skew(-25deg) rotateZ(-25deg);
+}
+
+.text,
+.text-reflectat {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+hr.custom {
+    position: absolute;
+    left: 50px;
+    height: 3rem;
+    width: 25rem;
+    box-shadow: inset 0px 0px 2px -14px rgba(170, 25, 69, 1);
+    background-color: #AA1945;
+    background-image: radial-gradient(circle, white 60%, transparent);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 3rem 3rem, cover;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    opacity: 1;
+}
+
+hr::after {
+    position: absolute;
+    content: "";
+    background: url("../media/imagine-mica.jpg") no-repeat;
+    background-size: contain;
+    margin-left: 155px;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    margin-top: 0px;
+}
+
+@keyframes animatie_reflectie_out {
+    0% {
+        transform: rotateX(180deg) skew(-45deg) scaleY(1.0) translate(10px, -35px);
+    }
+
+    100% {
+        transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px, -25px);
+    }
+}
+
+@keyframes animatie_reflectie_in {
+    0% {
+        transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px, -25px);
+    }
+
+    100% {
+        transform: rotateX(180deg) skew(-45deg) scaleY(1.0) translate(10px, -35px);
+    }
+}
+
+/* Video END */
+
+
+
+/* Print START */
+
+@media print {
+
+    #banner {
+        position: absolute;
+        display: inline-block;
+        top: 15%;
+        text-align: center;
+        height: 20px;
+        right: 10%;
+        width: 80%;
+        overflow: visible;
+        font-size: 150%;
+        border: 5px dotted black;
+        padding-bottom: 13px;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        overflow: visible !important;
+    }
+
+    header h1 {
+        page-break-after: always;
+        margin-top: 50%;
+        text-align: center;
+        margin-left: 1cm;
+        text-decoration: dashed black !important;
+        /* tbd dashed not working*/
+        font-size: 250%;
+        /* 2.5 x font-size*/
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+
+    body {
+        display: block;
+    }
+
+    address,
+    a,
+    footer {
+        color: black;
+        text-decoration: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    figure,
+    video,
+    iframe,
+    picture,
+    .laterale,
+    nav,
+    #iframe,
+    .iframe {
+        /* tbd fix iframe showing */
+        display: none;
+    }
+
+    #watermark {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        color: rgba(0, 0, 0, 0.4);
+        right: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #watermark::after {
+        opacity: 0.65;
+        padding: 5px;
+        width: 100px;
+        height: 2cm;
+        display: block;
+        background: white;
+        border: 3px solid black;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: none;
+        content: "Copyright Toader Andrei";
+    }
+
+    #end {
+        page-break-before: always;
+    }
+}
+
+
+/* Print END */
+
+@page {
+    size: A4 portrait;
+    margin-bottom: 2cm;
+    margin-top: 2cm;
+    counter-increment: page;
+}
+
+@page :left {
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+}
+
+@page :right {
+    margin-left: 0.5cm;
+    margin-right: 2.5cm;
+}
+
+@keyframes anim_laterale_out {
+    0% {
+        border-color: rgb(98, 98, 98);
+    }
+
+    100% {
+        border-color: lightgray;
+    }
+}
+
+@keyframes anim_laterale_in {
+    0% {
+        border-color: lightgray;
+    }
+
+    100% {
+        border-color: rgb(98, 98, 98);
+    }
+}
+
+/* Stiluri pentru ecranul mediu (tablete) */
+@media screen and (max-width: 1023px) {
+    main.indexPage {
+        grid-template-rows: auto auto 1fr 1fr 1fr auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "zone1 zone1"
+            "zone5 zone6"
+            "zone7 zone7"
+            "zone3 zone2"
+            "zone4 zone2"
+            "zone8 zone8";
+        font-size: 17px;
+    }
+    .table-container {
+        overflow-x: auto;
+        margin-bottom: 20px;
+        max-width: 20rem;
+    }
+}
+
+/* Stiluri pentru ecranul mic (mobil) */    
+@media screen and (max-width: 767px) {
+    main.indexPage {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "zone1"
+            "zone5"
+            "zone6"
+            "zone7"
+            "zone3"
+            "zone4"
+            "zone2"
+            "zone8";
+        font-size: 16px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        margin-bottom: 20px;
+        max-width: 20rem;
+    }
+
+    iframe[name="video_frame"] {
+        border: 6px solid var(--border-color);
+        width: auto;
+    }
+}
+
+/* Restul stilurilor cu unități relative */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.2em;
+}
+
+p,
+li,
+dd {
+    font-size: 1em;
+}
+
+/* Tranzitie pentru dimensiunea textului */
+main {
+    transition: font-size 0.7s ease-in-out;
+}
+
+/* Restul stilurilor rămân neschimbate */
+
+/* Assign grid areas to sections */
+header {
+    grid-area: header;
+}
+
+.zone1 {
+    grid-area: zone1;
+}
+
+.zone5 {
+    grid-area: zone5;
+}
+
+.zone6 {
+    grid-area: zone6;
+}
+
+.zone7 {
+    grid-area: zone7;
+}
+
+.zone3 {
+    grid-area: zone3;
+}
+
+.zone4 {
+    grid-area: zone4;
+}
+
+.zone2 {
+    grid-area: zone2;
+}
+
+.zone8 {
+    grid-area: zone8;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.icon {
+    font-size: 48px;
+    /* Adjust the size as needed */
+    color: #008080;
+    /* Change the color as needed */
+}
+
+/* Animation keyframes */
+@keyframes wrench {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Iframe START */
+
+/* Style for the video section */
+.video-section {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 10rem;
+}
+
+video::cue {
+    text-align: center;
+    line-height: 70%;
+    size: 1.2em;
+    position: 50%, 50%;
+    -webkit-region-fragment: viewport;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+/* Style for the iframe container */
+.iframe-container {
+    position: relative;
+}
+
+/* Style for the iframe */
+iframe[name="video_frame"] {
+    border: 6px solid var(--border-color);
+}
+
+/* Style for iframe links list */
+.iframe-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    left: -120px;
+    /* Adjust the position to move links outside the iframe */
+    background-color: none;
+}
+
+
+/* Style for iframe links */
+.iframe-links a {
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+    border: 2px solid var(--border-color);
+    padding: 1rem;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease;
+    max-width: 8rem;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    z-index: 10;
+    box-shadow: inset 10px 0px 10px #2ecc71AA;
+
+}
+
+/* Hover effect for iframe links */
+.iframe-links a:hover {
+    background-color: #2ecc71AA;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Iframe END */
+
+
+/* Table START */
+
+/* Stiluri pentru tabelul de orar */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+th,
+td {
+    border: 4zpx solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #FFF;
+    color: black;
+}
+
+table tbody td:nth-child(even) {
+    border-right: 2px solid var(--border-color);
+}
+
+table tbody td:nth-child(odd) {
+    border-right: 2px solid var(--highlight-color);
+}
+
+table tbody td {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+thead td,
+tfoot td {
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+}
+
+tbody tr:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s;
+}
+
+caption {
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    caption-side: bottom;
+}
+
+table thead th {
+    border-bottom: 3px solid var(--border-color);
+}
+
+/* Stilizare pentru borderul dintre tbody și tfoot */
+table tfoot td {
+    border-top: 6px solid var(--border-color);
+}
+
+/* Table END */

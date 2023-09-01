@@ -1,0 +1,12 @@
+#grid-galerie {
+    display: block;
+    text-align: left;
+}
+
+.emptySpace{
+    display: none;
+}
+
+.emptySpace2 {
+    display: none;
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include("../fragmente/head.ejs")%>
+</head>
+
+<body style="--background-color: #f5e3e0;
+            --text-color: #000;
+            --border-color: #2ecc71;
+            --highlight-color: #3498db;
+            --accent-color: #95a5a6;
+            --culoare-menu: #5BD5FC;">
+
+    <header>
+        <%- include("../fragmente/header.ejs")%>
+    </header>
+
+
+    <main class="indexPage">
+        <!-- Secțiune imbricată -->
+        <section class="zone1">
+            <h2 id="acasa">Acasă: <%= ip%>
+            </h2>
+            <p>Bine ați venit pe pagina de prezentare a <b>brandului Oneiros</b> de <b>saltele</b>. Aici veți
+                găsi cele
+                mai confortabile și <b>ortopedice</b> saltele pentru un somn odihnitor.</p>
+
+            <!-- Subsecțiuni din secțiunea "Acasă" -->
+            <section>
+                <h3 id="despre">Despre Noi</h3>
+                <a href="https://www.dormeo.ro/" target="_blank">Nu cumparati de aici!!!!!!! Produse false Oneiros</a>
+                <p><i>Oneiros</i> este un <i>brand de saltele</i> specializat în producția de <i>saltele
+                        ortopedice</i>
+                    de înaltă calitate, concepute pentru a oferi un <i>confort</i> optim în timpul somnului.</p>
+                <dl>
+                    <dt>Misiune</dt>
+                    <dd>Să oferim <b>saltele</b> de cea mai înaltă calitate pentru a îmbunătăți calitatea
+                        somnului
+                        clienților noștri.</dd>
+                    <dt>Viziune</dt>
+                    <dd>Să devenim lideri pe piața <i>saltelelor ortopedice</i> și să ne extindem în întreaga
+                        țară.</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h3 id="gama">Gama de Saltele</h3>
+                <p>Descoperiți o gamă variată de <b>saltele</b>, potrivite pentru diferite preferințe și nevoi,
+                    de la
+                    cele pentru dormit individual până la cele <i>ortopedice</i>.</p>
+                <ul>
+                    <li><b>Saltele</b> pentru dormit individual</li>
+                    <li><b>Saltele</b> pentru cupluri</li>
+                    <li><i>Saltele ortopedice</i></li>
+                    <li>Saltele cu spumă cu memorie</li>
+                </ul>
+                <h2>Galerie statica</h2>
+                <div id="grid-galerie">
+                    <div class="emptySpace"></div>
+                    <div class="emptySpace2"></div>
+                    <% for
+                        (let
+                        imag
+                        of
+                        imagini)
+                        {
+                        %>
+                        <figure>
+                            <picture>
+                                <source srcset="<%- imag.fisier_mediu %>"
+                                    media="(max-width:1000px)" />
+                                <source srcset="<%- imag.fisier_mic %>"
+                                    media="(max-width:500px)" />
+                                <img src="<%- imag.cale_fisier %>"
+                                    alt="<%- imag.titlu %>">
+                            </picture>
+                            <figcaption>
+                                <%- imag.text_descriere
+                                    %>
+                            </figcaption>
+                        </figure>
+                        <% }
+                            %>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="recenzii">Recenzii</h3>
+                <p>Citiți <b>recenziile</b> și părerile clienților mulțumiți care au ales <b>saltelele
+                        Oneiros</b>
+                    pentru un somn de <strong>calitate</strong>.</p>
+                <blockquote>
+                    <p><b>Saltelele Oneiros</b> sunt <strong>excelente</strong>! Am avut o experiență minunată
+                        cu
+                        <b>salteaua</b> lor ortopedică. Recomand cu încredere.
+                    </p>
+                    <cite>John Doe</cite>
+                </blockquote>
+                <blockquote>
+                    <p>Calitatea <b>saltelelor</b> este de <strong>neegalat</strong>. Am avut un somn foarte
+                        <em>odihnitor</em> de când am cumpărat <b>salteaua Oneiros</b>.
+                    </p>
+                    <cite>Jane Smith</cite>
+                </blockquote>
+            </section>
+
+            <!-- Întrebări frecvente -->
+            <section>
+                <h3 id="faq">Întrebări frecvente</h3>
+                <details>
+                    <summary>De ce să aleg o saltea ortopedică?</summary>
+                    <p>O saltea ortopedică poate oferi suportul necesar coloanei vertebrale, ajutând la
+                        reducerea
+                        durerilor de spate și a problemelor musculare. Aceasta vă poate asigura un somn mai
+                        odihnitor și
+                        un confort sporit.</p>
+                </details>
+                <details>
+                    <summary>Cât timp ar trebui să îmi schimb salteaua?</summary>
+                    <p>Recomandăm înlocuirea saltelei la fiecare 7-10 ani, deoarece aceasta poate să își piardă
+                        proprietățile și să devină incomodă în timp.</p>
+                </details>
+                <details>
+                    <summary>Există garanție pentru saltelele Oneiros?</summary>
+                    <!-- <p>Da, oferim o garanție de 10 ani pentru toate saltelele noastre, astfel încât să vă puteți bucura
+                        de somnul liniștit și confortabil pentru o perioadă îndelungată de timp.</p> -->
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                            <mstyle
+                                style="font-size: 1.5vw; position: relative; left:50px; top: 20px; font-weight:bold;">
+                                <mtext>
+                                    Formula garantiei</mtext>
+                            </mstyle>
+                        </mrow>
+                        <mspace linebreak='newline' />
+                        <mstyle style="font-size: 2vw; position: relative; top: 30px;">
+                            <mrow>
+                                <mstyle style="font-style: italic; text-decoration:none;">
+                                    <mtext>Gar</mtext>
+                                </mstyle>
+                                <mstyle style="font-weight: bold;">
+                                    <mo>=</mo>
+                                </mstyle>
+                                <mstyle
+                                    style="font-style: italic; color: black; background: linear-gradient(360deg,#5BD5FC,#E7F3F3);">
+                                    <mfrac linethickness='3px'>
+                                        <mn>Pret</mn>
+                                        <mi>A</mi>
+                                    </mfrac>
+                                </mstyle>
+                                <mstyle style="font-style: italic;">
+                                    <mtext>, where A</mtext>
+                                </mstyle>
+                                <mstyle style="font-weight: bold;">
+                                    <mo>=</mo>
+                                </mstyle>
+                                <mstyle style="color:green;">
+                                    <mi>L</mi>
+                                </mstyle>
+                                <mo>&#183;</mo>
+                                <mstyle style="color:red;">
+                                    <mi>l</mi>
+                                </mstyle>
+                            </mrow>
+                        </mstyle>
+                    </math>
+                </details>
+            </section>
+            <br>
+            <!-- Oferte speciale -->
+            <section>
+                <h3 id="oferteSpeciale">Oferte speciale</h3>
+                <details>
+                    <summary>Oferta #1: Saltea Ortopedică Classic</summary>
+                    <p>Saltea ortopedică Classic este concepută pentru a oferi suport ferm pentru spate și o
+                        poziție
+                        corectă a corpului în timpul somnului. Aceasta este disponibilă la preț redus doar
+                        pentru o
+                        perioadă limitată de timp.</p>
+                    <p><strong>Preț redus: 999 lei</strong></p>
+                    <p><a href="#">Detalii și comandă</a></p>
+                </details>
+                <details>
+                    <summary>Oferta #2: Saltea cu Spumă cu Memorie</summary>
+                    <p>Saltea cu spumă cu memorie se mulează perfect pe forma corpului, oferind un somn relaxant
+                        și
+                        senzația de plutire. Beneficiați acum de o reducere de 20% pentru această saltea de
+                        înaltă
+                        calitate.</p>
+                    <p><strong>Preț redus: 1499 lei</strong></p>
+                    <p><a href="#">Detalii și comandă</a></p>
+                </details>
+            </section>
+
+            <!-- Linkuri pentru videoclipuri care se deschid în iframe -->
+            <section class="iframe">
+                <h3>De ce alegerea unei noi saltele este foarte importantă?</h3>
+                <section class="video-section">
+                    <div class="iframe-container">
+                        <ul class="iframe-links">
+                            <li><a href="https://www.youtube.com/embed/rAFHpfwXYrI"
+                                    target="video_frame"
+                                    class="iframe-text">Explicațiile medicilor</a></li>
+                            <li><a href="https://www.youtube.com/embed/WWqhrNcuTDQ"
+                                    target="video_frame"
+                                    class="iframe-text">Sugestiile unui expert</a></li>
+                        </ul>
+                        <iframe name="video_frame"
+                            src="https://www.youtube.com/embed/zgoBmO2bzRo"
+                            width="560"
+                            height="315"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+                </section>
+
+            </section>
+        </section>
+
+        <!-- Adăugăm o imagine cu descriere folosind tagurile <figure> și <figcaption> -->
+        <figure class="zone8">
+            <picture>
+                <!-- Variantele de imagini pentru diferite dimensiuni de ecran -->
+                <!-- Imagine pentru ecran mic (mobil) -->
+                <source media="(max-width: 767px)"
+                    srcset="/resurse/media/imagine-mica.jpg">
+                <!-- Imagine pentru tabletă -->
+                <source media="(min-width: 768px) and (max-width: 1023px)"
+                    srcset="/resurse/media/imagine-medie.jpg">
+                <!-- Imagine pentru ecran mare -->
+                <source media="(min-width: 1024px)"
+                    srcset="/resurse/media/imagine-mare.jpg">
+
+                <!-- Imagine implicită pentru browserele care nu suportă srcset -->
+                <img src="/resurse/media/imagine-mare.jpg"
+                    alt="Imagine cu saltea Oneiros">
+            </picture>
+            <!-- Descriere pentru imagine -->
+            <figcaption>Saltea <b>Oneiros</b> - <b>confort</b> și <b>calitate</b> pentru un somn <em>odihnitor</em>.
+            </figcaption>
+        </figure>
+
+        <!-- Secțiune despre beneficiile saltelelor ortopedice -->
+        <section class="zone3">
+            <h3 id="beneficii">Beneficiile Saltelelor Ortopedice</h3>
+            <p>Saltelele ortopedice au devenit din ce în ce mai populare datorită beneficiilor pe care le aduc
+                pentru
+                sănătatea
+                coloanei vertebrale și a sistemului musculo-scheletic. Iată câteva dintre avantajele acestor
+                saltele:
+            </p>
+            <ul>
+                <li>Sprijin pentru coloana vertebrală - Saltelele ortopedice oferă un suport adecvat pentru coloana
+                    vertebrală,
+                    menținând o poziție corectă a spatelui în timpul somnului.</li>
+                <li>Reducerea durerilor de spate - Mulți oameni se confruntă cu dureri de spate, mai ales după o zi
+                    obositoare.
+                    Saltelele ortopedice pot ajuta la reducerea acestor dureri, oferind o susținere adecvată pentru
+                    mușchii
+                    spatelui.</li>
+                <li>Amortizare - Saltelele ortopedice sunt proiectate pentru a oferi o amortizare optimă, ceea ce
+                    poate
+                    ajuta la
+                    reducerea punctelor de presiune asupra corpului și la o distribuție uniformă a greutății.</li>
+                <li>Îmbunătățirea circulației sângelui - Prin menținerea unei poziții corecte a corpului și a
+                    coloanei
+                    vertebrale,
+                    saltelele ortopedice pot ajuta la îmbunătățirea circulației sângelui în timpul somnului.</li>
+                <li>Prevenirea problemelor musculo-scheletice - Utilizarea unei saltele ortopedice poate ajuta la
+                    prevenirea
+                    problemelor musculo-scheletice, cum ar fi spondiloza cervicală sau lombară.</li>
+            </ul>
+            <!-- tbd add videos and tracks (subtitles) -->
+            <video id="video-vtt"
+                controls="controls"
+                poster="/resurse/media/imagine-medie.jpg"
+                preload="auto">
+                <source src="/resurse/media/Prezentare_Saltea.mp4"
+                    type="video/mp4">
+                <source src="/resurse/media/Prezentare_Saltea.ogv"
+                    type="video/ogv">
+                <track default
+                    src="/resurse/tracks/TrackRomana.vtt"
+                    kind="captions"
+                    srclang="ro"
+                    label="romana">
+                <track src="/resurse/tracks/TrackEngleza.vtt"
+                    kind="captions"
+                    srclang="en"
+                    label="engleza">
+                Browserul dumneavoastră nu suportă tagul video.
+            </video>
+        </section>
+
+        <!-- Secțiune cu sfaturi pentru alegerea saltelei potrivite -->
+        <section class="zone4">
+            <h3 id="sfaturi">Sfaturi pentru Alegerea Saltelei Potrivite</h3>
+            <p>Alegerea unei saltele potrivite poate fi esențială pentru calitatea somnului și sănătatea generală.
+                Iată
+                câteva
+                sfaturi care vă pot ajuta să faceți cea mai bună alegere:</p>
+            <ol>
+                <li>Stabiliți preferințele personale - Decideți dacă preferați o saltea mai fermă sau mai moale,
+                    dacă
+                    aveți
+                    nevoie de un suport suplimentar pentru spate sau dacă doriți o saltea cu spumă cu memorie.</li>
+                <li>Testați saltele în magazin - Încercați câteva tipuri diferite de saltele în magazin pentru a
+                    vedea
+                    care se
+                    potrivește cel mai bine corpului dumneavoastră și vă oferă cel mai mare confort.</li>
+                <li>Verificați garanția și politicile de returnare - Asigurați-vă că salteaua pe care o cumpărați
+                    vine
+                    cu o
+                    garanție adecvată și o politică de returnare în cazul în care nu sunteți mulțumit de achiziție.
+                </li>
+                <li>Consultați-vă cu un specialist - Dacă aveți probleme de sănătate specifice sau dureri cronice,
+                    puteți
+                    consulta un specialist în sănătate sau un ortoped pentru a vă oferi sfaturi personalizate.</li>
+            </ol>
+            <section id="duotone">
+                <div></div>
+            </section>
+            <div class="text">
+                Saltea
+            </div>
+            <div class="text-reflectat">
+                Saltea
+            </div>
+            <hr class="custom" />
+        </section>
+
+        <section class="zone5">
+            <p class="bg-primary">zone5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid provident
+                vero, reiciendis ea
+                ducimus est cupiditate officiis dolore maiores itaque a. Repudiandae, nihil ratione eveniet fugit
+                atque
+                magnam molestiae. Error.</p>
+        </section>
+
+        <section class="zone6">
+            <p>zone6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid provident vero, reiciendis ea
+                ducimus est
+                cupiditate officiis dolore maiores itaque a. Repudiandae, nihil ratione eveniet fugit atque magnam
+                molestiae.
+                Error.</p>
+        </section>
+
+        <section class="zone7">
+            <p>zone7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid provident vero, reiciendis ea
+                ducimus est
+                cupiditate officiis dolore maiores itaque a. Repudiandae, nihil ratione eveniet fugit atque magnam
+                molestiae.
+                Error.</p>
+        </section>
+
+        <section class="zone 2 ">
+            <div class="table-container">
+                <table>
+                    <caption>Orar Magazin Oneiros</caption>
+                    <thead>
+                        <tr>
+                            <th>Ziua</th>
+                            <th>Ora deschidere</th>
+                            <th>Ora închidere</th>
+                            <th>Observații</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Luni</td>
+                            <td>09:00</td>
+                            <td>18:00</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Marți</td>
+                            <td>09:00</td>
+                            <td>18:00</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Miercuri</td>
+                            <td>09:00</td>
+                            <td>18:00</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Joi</td>
+                            <td>09:00</td>
+                            <td>18:00</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Programul poate varia în funcție de sărbători sau evenimente speciale.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+                <span class="background-fix"></span>
+        </section>
+
+
+        </div>
+    </main>
+
+    <footer><%- include("../fragmente/footer.ejs")%></footer>
+</body>
+
+
+</html>

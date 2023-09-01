@@ -1,0 +1,165 @@
+{
+	"cale_galerie": "resurse/media/galerie-statica",
+	"imagini": [
+		{
+			"cale_fisier": "saltea1.jpg",
+			"text_descriere": "Saltea 1",
+			"anotimp": [
+				12,
+				1,
+				2
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea2.jpg",
+			"text_descriere": "Saltea 2",
+			"anotimp": [
+				3,
+				4,
+				5
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea3.jpg",
+			"text_descriere": "Saltea 3",
+			"anotimp": [
+				6,
+				7,
+				9
+			],
+			"titlu": "Produs"
+		},
+		{
+			"cale_fisier": "saltea4.jpg",
+			"text_descriere": "Saltea 4",
+			"anotimp": [
+				9,
+				10,
+				11
+			],
+			"titlu": "Produs"
+		}
+	]
+}
